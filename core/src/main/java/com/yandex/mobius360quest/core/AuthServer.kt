@@ -1,4 +1,4 @@
-package com.yandex.mobius360quest.to_hide
+package com.yandex.mobius360quest.core
 
 import android.util.Base64
 import java.nio.charset.Charset
@@ -19,7 +19,7 @@ object AuthServer {
         }
 
     private fun checkLogin(login: String): Boolean {
-        return encrypt(login) == this.login
+        return encrypt(login) == AuthServer.login
     }
 
     private fun checkPassword(password: String): AuthResponse =
@@ -30,7 +30,7 @@ object AuthServer {
         }
 
     fun checkEmail(email: String): Boolean {
-        return encrypt(email) == this.email
+        return encrypt(email) == AuthServer.email
     }
 
     private fun encrypt(string: String): String =

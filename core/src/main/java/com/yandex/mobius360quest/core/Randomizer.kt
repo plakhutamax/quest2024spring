@@ -1,4 +1,4 @@
-package com.yandex.mobius360quest.to_hide
+package com.yandex.mobius360quest.core
 
 import kotlin.random.Random
 import kotlin.random.nextInt

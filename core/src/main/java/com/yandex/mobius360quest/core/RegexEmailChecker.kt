@@ -1,4 +1,4 @@
-package com.yandex.mobius360quest
+package com.yandex.mobius360quest.core
 
 class RegexEmailChecker(regexProvider: () -> Regex) {
     private val regex = regexProvider()

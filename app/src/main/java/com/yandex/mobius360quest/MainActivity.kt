@@ -7,13 +7,13 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.View
-import com.yandex.mobius360quest.databinding.ActivityMainBinding
+import com.yandex.mobius360quest.core.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
-    private val navController get() = findNavController(R.id.nav_host_fragment_content_main)
+    private val navController get() = findNavController(com.yandex.mobius360quest.core.R.id.nav_host_fragment_content_main)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

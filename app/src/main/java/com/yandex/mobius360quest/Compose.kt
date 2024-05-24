@@ -24,8 +24,8 @@ import androidx.compose.ui.graphics.Color.Companion.Red
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.fragment.findNavController
-import com.yandex.mobius360quest.to_hide.BaseComposeFragment
-import com.yandex.mobius360quest.to_hide.clickable
+import com.yandex.mobius360quest.core.BaseComposeFragment
+import com.yandex.mobius360quest.core.clickable
 
 class Compose : BaseComposeFragment() {
 

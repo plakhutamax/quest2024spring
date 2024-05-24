@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.yandex.mobius360quest.databinding.FragmentSecondBinding
+import com.yandex.mobius360quest.core.databinding.FragmentSecondBinding
 
 class Step : Fragment() {
 

@@ -1,26 +1,20 @@
 package com.yandex.mobius360quest
 
 import android.os.Bundle
-import android.util.Base64
-import android.util.Log
 import android.view.View
 import androidx.core.widget.doOnTextChanged
 import androidx.navigation.fragment.findNavController
-import com.yandex.mobius360quest.databinding.AuthFragmentBinding
-import com.yandex.mobius360quest.to_hide.AuthResponse
-import com.yandex.mobius360quest.to_hide.AuthServer
-import com.yandex.mobius360quest.to_hide.BaseViewBindingFragment
-import java.nio.charset.Charset
+import com.yandex.mobius360quest.core.AuthResponse
+import com.yandex.mobius360quest.core.AuthServer
+import com.yandex.mobius360quest.core.BaseViewBindingFragment
+import com.yandex.mobius360quest.core.databinding.AuthFragmentBinding
 
 class Auth : BaseViewBindingFragment<AuthFragmentBinding>(AuthFragmentBinding::inflate) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.auth.setOnClickListener {
-//            login(binding.inputLogin.toString(), binding.inputPassword.toString())
-            // fix #1
             login(binding.inputLogin.text.toString(), binding.inputPassword.text.toString())
-            // ---------
         }
         val removeError = { _: CharSequence?, _: Int, _: Int, _: Int ->
             binding.inputLoginLayout.error = null

@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.slider.LabelFormatter
-import com.yandex.mobius360quest.databinding.LockpuzzleBinding
-import com.yandex.mobius360quest.to_hide.BaseViewBindingFragment
+import com.yandex.mobius360quest.core.BaseViewBindingFragment
+import com.yandex.mobius360quest.core.databinding.LockpuzzleBinding
 
 class Locked : BaseViewBindingFragment<LockpuzzleBinding>(LockpuzzleBinding::inflate) {
 

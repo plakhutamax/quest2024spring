@@ -1,4 +1,4 @@
-package com.yandex.mobius360quest.to_hide
+package com.yandex.mobius360quest.core
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.gestures.detectTapGestures

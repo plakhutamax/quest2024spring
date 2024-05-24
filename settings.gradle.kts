@@ -14,5 +14,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Mobius360Quest"
-include(":app")
+include(":app", ":core")
  

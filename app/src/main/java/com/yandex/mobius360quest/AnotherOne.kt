@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.yandex.mobius360quest.databinding.OrdinaryDaysBinding
+import com.yandex.mobius360quest.core.databinding.OrdinaryDaysBinding
 
 class AnotherOne : Fragment() {
 

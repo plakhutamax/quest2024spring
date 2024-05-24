@@ -4,9 +4,10 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.widget.doOnTextChanged
 import androidx.navigation.fragment.findNavController
-import com.yandex.mobius360quest.databinding.EmailFragmentBinding
-import com.yandex.mobius360quest.to_hide.AuthServer
-import com.yandex.mobius360quest.to_hide.BaseViewBindingFragment
+import com.yandex.mobius360quest.core.AuthServer
+import com.yandex.mobius360quest.core.BaseViewBindingFragment
+import com.yandex.mobius360quest.core.RegexEmailChecker
+import com.yandex.mobius360quest.core.databinding.EmailFragmentBinding
 
 class Mail : BaseViewBindingFragment<EmailFragmentBinding>(EmailFragmentBinding::inflate) {
 

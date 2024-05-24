@@ -5,8 +5,8 @@ import android.os.Handler
 import android.os.Looper
 import android.view.View
 import androidx.navigation.fragment.findNavController
-import com.yandex.mobius360quest.databinding.FragmentWithHandlerBinding
-import com.yandex.mobius360quest.to_hide.BaseViewBindingFragment
+import com.yandex.mobius360quest.core.BaseViewBindingFragment
+import com.yandex.mobius360quest.core.databinding.FragmentWithHandlerBinding
 
 class WithHandlerFragment : BaseViewBindingFragment<FragmentWithHandlerBinding>(FragmentWithHandlerBinding::inflate) {
 

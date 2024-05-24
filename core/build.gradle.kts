@@ -1,21 +1,16 @@
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    id("com.android.library")
+    id("kotlin-android")
     kotlin("plugin.serialization") version "1.8.0"
 }
 
 android {
-    namespace = "com.yandex.mobius360quest"
+    namespace = "com.yandex.mobius360quest.core"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.yandex.mobius360quest"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "0.1"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -59,7 +54,6 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
-    implementation(project(":core"))
 
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
 

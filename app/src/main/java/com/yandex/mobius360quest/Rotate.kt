@@ -5,11 +5,9 @@ import android.view.View
 import android.widget.Button
 import androidx.core.view.forEach
 import androidx.navigation.fragment.findNavController
-import com.yandex.mobius360quest.databinding.RotateLayoutBinding
-import com.yandex.mobius360quest.to_hide.BaseViewBindingFragment
-import com.yandex.mobius360quest.to_hide.Randomizer
-import kotlin.random.Random
-import kotlin.random.nextInt
+import com.yandex.mobius360quest.core.BaseViewBindingFragment
+import com.yandex.mobius360quest.core.Randomizer
+import com.yandex.mobius360quest.core.databinding.RotateLayoutBinding
 
 class Rotate : BaseViewBindingFragment<RotateLayoutBinding>(RotateLayoutBinding::inflate) {
 
@@ -21,17 +19,17 @@ class Rotate : BaseViewBindingFragment<RotateLayoutBinding>(RotateLayoutBinding:
         entry = binding.passcode.text.toString()
         makeCheck()
         binding.text.text = getString(R.string.rotate_passcode_template, value)
-        binding.grid.forEach { view ->
+        binding.grid.forEach { itemView ->
             when {
-                view.id == R.id.button_clear -> view.setOnClickListener {
+                itemView.id == com.yandex.mobius360quest.core.R.id.button_clear -> itemView.setOnClickListener {
                     binding.passcode.text = entry
                     entry = ""
                 }
-                view.id == R.id.button_next -> view.setOnClickListener {
+                itemView.id == com.yandex.mobius360quest.core.R.id.button_next -> itemView.setOnClickListener {
                     findNavController().navigate(R.id.step_to_next)
                 }
-                view is Button -> view.setOnClickListener {
-                    entry += view.text.toString()
+                itemView is Button -> itemView.setOnClickListener {
+                    entry += itemView.text.toString()
                     binding.passcode.text = entry
                     makeCheck()
                 }

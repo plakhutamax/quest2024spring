@@ -3,7 +3,7 @@ package com.yandex.mobius360quest
 import android.os.Bundle
 import android.view.View
 import com.yandex.mobius360quest.databinding.AnimationFragmentBinding
-import com.yandex.mobius360quest.to_hide.BaseViewBindingFragment
+import com.yandex.mobius360quest.core.BaseViewBindingFragment
 
 class Animation : BaseViewBindingFragment<AnimationFragmentBinding>(AnimationFragmentBinding::inflate) {
 

@@ -9,7 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.sp
-import com.yandex.mobius360quest.to_hide.BaseComposeFragment
+import com.yandex.mobius360quest.core.BaseComposeFragment
 
 class WinFragment : BaseComposeFragment() {
 

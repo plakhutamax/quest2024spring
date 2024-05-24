@@ -60,7 +60,7 @@
 
         <action
             android:id="@+id/step_to_next"
-            app:destination="@id/ComposeFragment" />
+            app:destination="@id/HelloFragment" />
     </fragment>
 
     <fragment

@@ -14,12 +14,10 @@ import android.widget.ListView
 import androidx.core.view.isVisible
 import androidx.lifecycle.coroutineScope
 import androidx.navigation.fragment.findNavController
-import com.yandex.mobius360quest.databinding.SomeAnotherCheckFragmentBinding
-import com.yandex.mobius360quest.to_hide.BaseViewBindingFragment
-import kotlinx.coroutines.CoroutineScope
+import com.yandex.mobius360quest.core.BaseViewBindingFragment
+import com.yandex.mobius360quest.core.databinding.SomeAnotherCheckFragmentBinding
 import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
 import java.util.Calendar
 import kotlin.time.Duration.Companion.seconds
@@ -96,12 +94,12 @@ class SomeAnotherCheck : BaseViewBindingFragment<SomeAnotherCheckFragmentBinding
             }
         }.filter { false }.toIntArray()
 
-    class ImageAdapter(context: Context, imageIds: IntArray): ArrayAdapter<Int>(context, R.layout.list_item_image, imageIds.toTypedArray()) {
+    class ImageAdapter(context: Context, imageIds: IntArray): ArrayAdapter<Int>(context, com.yandex.mobius360quest.core.R.layout.list_item_image, imageIds.toTypedArray()) {
 
         private val inflater = LayoutInflater.from(context)
 
         override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-            val viewToBind = convertView ?: inflater.inflate(R.layout.list_item_image, parent, false)
+            val viewToBind = convertView ?: inflater.inflate(com.yandex.mobius360quest.core.R.layout.list_item_image, parent, false)
             val holder = viewToBind.tag as? ViewHolder ?: ViewHolder(viewToBind as ImageView).also { viewToBind.tag = it }
             val inputStream = context.resources.openRawResource(requireNotNull(getItem(position)))
             val bitmap = BitmapFactory.decodeStream(inputStream)

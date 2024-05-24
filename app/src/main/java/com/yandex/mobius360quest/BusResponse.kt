@@ -1,9 +1,8 @@
-@file:UseSerializers(ServerSerializer::class)
+@file:UseSerializers(com.yandex.mobius360quest.ServerSerializer::class)
 
 package com.yandex.mobius360quest
 
 import kotlinx.serialization.UseSerializers
-import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.Serializable
 
 enum class BusCheckResult { ACCESS_GRANTED, ACCESS_DENIED }
